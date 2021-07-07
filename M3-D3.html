@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <title>Edward and Marco`S Travel Agency</title>
+    <style>
+        body {
+            background-color: aquamarine
+        }
+    .images {
+        height: 200px;
+        width: 200px;
+    }
+    .customers {
+
+        height: 150px;
+        width:110px;
+    }
+    </style>
+    <!--
+
+    ASSIGNMENT RULES
+    - This challenge should be done in pairs, go in Eduflow to find who you are paired with
+    - Implement one exercise each, switching side from driver and navigator frequently
+    - We suggest you to use Zoom or Google Hangouts to speak and look at each other throughout the whole activity
+
+    - The exercise must be pushed to the repository and linked on EduFlow by the end of the day
+    - You can google / use StackOverflow BUT we suggest you to use just the material provided
+    - To test the page, open it with your browser and use the inspector.
+    - Use Bootstrap4.6 classes to arrange the page layout and components.
+    - Use containers, rows and cols in order to have a working responsive layout.
+
+
+    EXERCISE: 
+    You are creating a website for a Travel Agency.
+    In thins page you will add destinations of places you're dreaming to go to in the near future!
+
+
+    Ex 1) Implement a navigation bar. Connected to all the sections of the page to the menu items. 
+    Ex 2) Add a logo into the navigation bar (can be any image)
+    Ex 3) Add a Jumbotron section with the name and the claim of the tour operator agency
+    Ex 4) Implement the "Deal of the Week" section. In this section you'll display 4 destinations.
+     In this section you should have:
+        - 4 destinations per row when the screen is very large
+        - 3 destinations per row when you are on a tablet (or a smaller window)
+        - 2 destinations per row when you are on a small screen
+
+    Ex 5) Implement the "Welcome Summer" section. In this section you'll propose 6 destinations to your user
+        In this section you should have:
+            - 6 destinations per row when the screen is very large
+            - 3 destinations per row when you are on a tablet (or a smaller window)
+            - 2 destinations per row when you are on a small screen
+    
+    Ex 6) Implement a "Deal of the day" section. In this section you'll have:
+        - 66% of the page with a picture of the destination
+        - 33% with Name, dates, price and a short description
+
+    Ex 7) Make the "Deal of the day" section disappear on mobile screens
+    Ex 8) Add to the Welcome Summer destinations section a large shadow
+    Ex 9) Create a section "Last Minute", in which you'll display the pictures of the destinations as Cards
+    Ex 10) Create a "Testimonial" section, in which the user can find several feedbacks from fake customers
+    Ex 11) Create a footer with the company informations and a "Contact Us" button
+
+    Ex 11) Create a button next to each section to collapse and reopen the given section
+    Ex 12) Create a method that counts the number of "travels" on the page
+    Ex 13) Create a modal view with a message and a email field
+    Ex 14) When the user clicks on "contact us" the modal is displayed
+    Ex 15) Create a function that adds a "HOT" badge to all the "Welcome Summer" offers
+    Ex 16) Create a function to delete all "cards" from the page
+  -->
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+     <!-- Image and text -->
+    <nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Volkswagen_logo_2019.svg/2048px-Volkswagen_logo_2019.svg.png" width="30" height="30" class="d-inline-block align-top" alt="">
+      E and M Travel Agency
+    </a>
+  </nav>
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pricing</a>
+            </li>
+
+          </ul>
+        </div>
+      </nav>
+      <div class="container my-5">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-4">E&M Agency</h1>
+          <p class="lead">best places in the world</p>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="container">
+        <p>
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+              Deal Of The Week
+            </button>
+          </p>
+          <div class="collapse" id="collapseExample">
+            <div class="card card-body">
+                <h1>Deal Of The Week</h1>
+                <div class="row row-cols-1 row-cols-md-3" id="cities" style="margin-top: 100px;">
+                  <div class="col-6 col-md-4 col-lg-3">
+                    <div class="card; h-100">
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Sunset_gondola_Basilica_Della_Salute_.png/800px-Sunset_gondola_Basilica_Della_Salute_.png" class="card-img-top images" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">city name</h5>
+                        <p class="card-text">and city description</p>
+                      </div>
+                    </div>
+                  </div>
+                   <div class="col-6 col-md-4 col-lg-3"> <!-- this is the resonsitive section -->
+                    <div class="card; h-100">
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/b/b4/Torino-mole10.jpg" class="card-img-top images" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">city name</h5>
+                        <p class="card-text">and city description</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6 col-md-4 col-lg-3">
+                    <div class="card; h-100">
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Galleria_San_Martino._02_%28cropped%29.JPG/800px-Galleria_San_Martino._02_%28cropped%29.JPG" class="card-img-top images" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">city name</h5>
+                        <p class="card-text">and city description</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6 col-md-4 col-lg-3">
+                    <div class="card; h-100">
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/0_Castel_et_pont_Sant%27Angelo_%281%29.JPG/1024px-0_Castel_et_pont_Sant%27Angelo_%281%29.JPG" class="card-img-top images" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">city name</h5>
+                        <p class="card-text">and city description</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6 col-md-4 col-lg-3">
+                    <div class="card; h-100">
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Vista_panor%C3%A1mica_desde_Olympiapark%2C_M%C3%BAnich%2C_Alemania_2012-04-28%2C_DD_03.JPG/1024px-Vista_panor%C3%A1mica_desde_Olympiapark%2C_M%C3%BAnich%2C_Alemania_2012-04-28%2C_DD_03.JPG" class="card-img-top images" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">city name</h5>
+                        <p class="card-text">and city description</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6 col-md-4 col-lg-3">
+                    <div class="card; h-100">
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/1/1c/West_and_East_Germans_at_the_Brandenburg_Gate_in_1989.jpg" class="card-img-top images" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">city name</h5>
+                        <p class="card-text">and city description</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6 col-md-4 col-lg-3">
+                    <div class="card; h-100">
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Hamburg_Rathausmarkt_und_Rathaus.jpg/800px-Hamburg_Rathausmarkt_und_Rathaus.jpg" class="card-img-top images" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">city name</h5>
+                        <p class="card-text">and city description</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6 col-md-4 col-lg-3">
+                    <div class="card; h-100">
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a1/Courbet_Frankfurt.jpg" class="card-img-top images" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">city name</h5>
+                        <p class="card-text">and city description</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6 col-md-4 col-lg-3">
+                      <div class="card; h-100">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Sunset_gondola_Basilica_Della_Salute_.png/800px-Sunset_gondola_Basilica_Della_Salute_.png" class="card-img-top images" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">city name</h5>
+                          <p class="card-text">and city description</p>
+                        </div>
+                      </div>
+                    </div>
+                     <div class="col-6 col-md-4 col-lg-3"> <!-- this is the resonsitive section -->
+                      <div class="card; h-100">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b4/Torino-mole10.jpg" class="card-img-top images" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">city name</h5>
+                          <p class="card-text">and city description</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                      <div class="card; h-100">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Galleria_San_Martino._02_%28cropped%29.JPG/800px-Galleria_San_Martino._02_%28cropped%29.JPG" class="card-img-top images" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">city name</h5>
+                          <p class="card-text">and city description</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                      <div class="card; h-100">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/0_Castel_et_pont_Sant%27Angelo_%281%29.JPG/1024px-0_Castel_et_pont_Sant%27Angelo_%281%29.JPG" class="card-img-top images" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">city name</h5>
+                          <p class="card-text">and city description</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                      <div class="card; h-100">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Vista_panor%C3%A1mica_desde_Olympiapark%2C_M%C3%BAnich%2C_Alemania_2012-04-28%2C_DD_03.JPG/1024px-Vista_panor%C3%A1mica_desde_Olympiapark%2C_M%C3%BAnich%2C_Alemania_2012-04-28%2C_DD_03.JPG" class="card-img-top images" alt="...">
+                        <div class="card-body">and city description
+                          <h5 class="card-title">city name</h5>
+                          <p class="card-text">and city description</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                      <div class="card; h-100">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/1/1c/West_and_East_Germans_at_the_Brandenburg_Gate_in_1989.jpg" class="card-img-top images" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">city name</h5>
+                          <p class="card-text">and city description</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                      <div class="card; h-100">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Hamburg_Rathausmarkt_und_Rathaus.jpg/800px-Hamburg_Rathausmarkt_und_Rathaus.jpg" class="card-img-top images" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">city name</h5>
+                          <p class="card-text">and city description</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                      <div class="card; h-100">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a1/Courbet_Frankfurt.jpg" class="card-img-top images" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">city name</h5>
+                          <p class="card-text">and city description</p>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+          
+            </div>
+          </div>
+        
+<hr>
+
+
+
+
+
+      <div class="container shadow-lg p-3 mb-5 rounded">
+        <p>
+    
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample">
+             Welcome Sommer
+            </button>
+          </p>
+          <div class="collapse" id="collapseExample1">
+            <div class="card card-body">
+                <h1>Welcome Summer</h1>
+                <div class="row">
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+                    
+                        <div class="card" style="width:100%">
+                            <img class="images" src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1008&q=80" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Arizona</h5>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+                        <div class="card" style="width:100%">
+                            <img class="images" src="https://images.unsplash.com/photo-1508672019048-805c876b67e2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1093&q=80" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Alps</h5>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+                        <div class="card" style="width:100%">
+                            <img class="images" src="https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=714&q=80" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Brazil</h5>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+                        <div class="card" style="width:100%">
+                            <img class="images" src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=630&q=80" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Venice</h5>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+                        <div class="card" style="width:100%">
+                            <img class="images" src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=633&q=80" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Italy</h5>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+                        <div class="card" style="width:100%">
+                            <img class="images" src="https://images.unsplash.com/photo-1517760444937-f6397edcbbcd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Peru</h5>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+       
+
+
+      </div>
+
+      <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+    <hr>
+<div class="container d-none d-sm-block">
+    <p>
+  <a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Toggle first element</a>
+  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Toggle second element</button>
+  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">Toggle both elements</button>
+</p>
+<div class="row">
+  <div class="col">
+    <div class="collapse multi-collapse" id="multiCollapseExample1">
+      <div class="card card-body">
+        Some placeholder content for the first collapse component of this multi-collapse example. This panel is hidden by default but revealed when the user activates the relevant trigger.
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="collapse multi-collapse" id="multiCollapseExample2">
+      <div class="card card-body">
+        Some placeholder content for the second collapse component of this multi-collapse example. This panel is hidden by default but revealed when the user activates the relevant trigger.
+      </div>
+    </div>
+  </div>
+</div>
+    <h1>Deal Of The Day</h1>
+    <div class="row">
+    <div class="col-6 col-md-4">
+        <div class="card; h-100">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a1/Courbet_Frankfurt.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">city name</h5>
+              <p class="card-text">and city description</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-6 col-md-4">
+        <div class="card; h-100">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a1/Courbet_Frankfurt.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">city name</h5>
+              <p class="card-text">and city description</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-6 col-md-4">
+        <div class="card; h-100">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a1/Courbet_Frankfurt.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">city name</h5>
+              <p class="card-text">and city description</p>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+<hr>
+<div class="container">
+    <h1>Testimonial</h1>
+    <ul class="list-unstyled">
+        <li class="media">
+          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGVvcGxlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60" class="mr-3 customers" alt="...">
+          <div class="media-body">
+            <h5 class="mt-0 mb-1">List-based media object</h5>
+            <p>All my girls vintage Chanel baby. So you can have your cake. Tonight, tonight, tonight, I'm walking on air. Slowly swallowing down my fear, yeah yeah. Growing fast into a bolt of lightning. So hot and heavy, 'Til dawn. That fairy tale ending with a knight in shining armor. Heavy is the head that wears the crown.</p>
+          </div>
+        </li>
+        <li class="media my-4">
+          <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8cGVvcGxlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60" class="mr-3 customers" alt="...">
+          <div class="media-body">
+            <h5 class="mt-0 mb-1">List-based media object</h5>
+            <p>Maybe a reason why all the doors are closed. Cause once you’re mine, once you’re mine. Be your teenage dream tonight. Heavy is the head that wears the crown. It's not even a holiday, nothing to celebrate. A perfect storm, perfect storm.</p>
+          </div>
+        </li>
+        <li class="media">
+          <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8cGVvcGxlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60" class="mr-3 customers" alt="...">
+          <div class="media-body">
+            <h5 class="mt-0 mb-1">List-based media object</h5>
+            <p>Are you brave enough to let me see your peacock? There’s no going back. This is the last time you say, after the last line you break. At the eh-end of it all.</p>
+          </div>
+        </li>
+      </ul>
+</div>
+<footer>
+    <div class="jumbotron" style="background-color: rgb(105, 206, 173);">
+        <h1 class="display-4">E&M Travel Company</h1>
+        <p class="lead">probably nicest travel company in the universe</p>
+        <hr class="my-4">
+        <p>write to us to improve your knowledge of the universe!</p>
+        <a class="btn btn-primary btn-lg" href="#" role="button">Contact us</a>
+      </div>
+  </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
+  </body>
+</html>
+
