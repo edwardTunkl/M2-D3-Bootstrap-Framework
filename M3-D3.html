@@ -8,7 +8,7 @@
     <title>Edward & Marco`S Travel Agency</title>
     <style>
         body {
-            background-color: rgb(168, 241, 217)
+            background-color: rgb(241, 228, 168)
         }
     .images {
         height: 200px;
@@ -293,7 +293,7 @@
                         <div class="card" style="width:100%">
                             <img class="images" src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1008&q=80" class="card-img-top" alt="...">
                             <div class="card-body">
-                              <h5 class="card-title">Arizona</h5>
+                              <h5 class="card-title">Arizona<span class="badge badge-secondary">HOT</span></h5>
                             </div>
                           </div>
                     </div>
@@ -301,7 +301,7 @@
                         <div class="card" style="width:100%">
                             <img class="images" src="https://images.unsplash.com/photo-1508672019048-805c876b67e2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1093&q=80" class="card-img-top" alt="...">
                             <div class="card-body">
-                              <h5 class="card-title">Alps</h5>
+                              <h5 class="card-title">Alps<span class="badge badge-secondary">HOT</span></h5>
                             </div>
                           </div>
                     </div>
@@ -309,7 +309,7 @@
                         <div class="card" style="width:100%">
                             <img class="images" src="https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=714&q=80" class="card-img-top" alt="...">
                             <div class="card-body">
-                              <h5 class="card-title">Brazil</h5>
+                              <h5 class="card-title">Brazil<span class="badge badge-secondary">HOT</span></h5>
                             </div>
                           </div>
                     </div>
@@ -317,7 +317,7 @@
                         <div class="card" style="width:100%">
                             <img class="images" src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=630&q=80" class="card-img-top" alt="...">
                             <div class="card-body">
-                              <h5 class="card-title">Venice</h5>
+                              <h5 class="card-title">Venice<span class="badge badge-secondary">HOT</span></h5>
                             </div>
                           </div>
                     </div>
@@ -325,7 +325,7 @@
                         <div class="card" style="width:100%">
                             <img class="images" src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=633&q=80" class="card-img-top" alt="...">
                             <div class="card-body">
-                              <h5 class="card-title">Italy</h5>
+                              <h5 class="card-title">Italy<span class="badge badge-secondary">HOT</span></h5>
                             </div>
                           </div>
                     </div>
@@ -333,7 +333,7 @@
                         <div class="card" style="width:100%">
                             <img class="images" src="https://images.unsplash.com/photo-1517760444937-f6397edcbbcd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" class="card-img-top" alt="...">
                             <div class="card-body">
-                              <h5 class="card-title">Peru</h5>
+                              <h5 class="card-title">Peru<span class="badge badge-secondary">HOT</span></h5>
                             </div>
                           </div>
                     </div>
@@ -423,18 +423,57 @@
                 </li>
               </ul>
         </div>
-      </div>
-    
+      </div> 
 </div>
+<hr>
 <div class="container">
+<div class="alert alert-primary" role="alert">
+    the number of travels is: <script type="text/javascript">
+        var parent = document.getElementById("parentId");
+        var nodesSameClass = parent.getElementsByClassName("card");
+        alert (nodesSameClass.length)
+    </script>
+ </div>
+</div>
+<hr>
+<div class="container my-5">
 
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">E & M Travel Agency</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>
+              We are happy you cose E & M Travel Agency!!!
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Send email</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+
+<div class="container">
     <footer>
-        <div class="jumbotron" style="background-color: rgb(109, 247, 201);">
+        <div class="jumbotron" style="background-color: rgb(247, 187, 109);">
             <h1 class="display-4">E&M Travel Company</h1>
             <p class="lead">probably nicest travel company in the universe</p>
             <hr class="my-4">
             <p>write to us to improve your knowledge of the universe!</p>
-            <a class="btn btn-primary btn-lg" href="#" role="button">Contact us</a>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                Contact us
+              </button>
           </div>
       </footer>
 </div>
